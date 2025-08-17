@@ -37,6 +37,6 @@ def search(query: str, limit: int = 10) -> List[Dict]:
 # --------- NOVO: TOOL fetch ---------
 # Recebe ids e devolve conteúdo textual
 @mcp.tool(name="fetch", description="Busca o conteúdo bruto de itens por id.")
-def fetch(id: _id) -> str:
+def fetch(id: str) -> str:
             return "Echo!"
         
