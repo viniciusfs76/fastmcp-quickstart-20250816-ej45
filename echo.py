@@ -18,9 +18,9 @@ logger = logging.getLogger(__name__)
 
 # OpenAI configuration
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-VECTOR_STORE_ID = os.environ.get("VECTOR_STORE_ID", "")
+VECTOR_STORE_ID = os.environ.get("vs_68a1a7a6f8308191b38adfb366076d2c", "")
 
-# Initialize OpenAI client
+# penAI client
 openai_client = OpenAI()
 
 server_instructions = """
