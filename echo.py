@@ -37,14 +37,8 @@ def search(query: str, limit: int = 10) -> List[Dict]:
 # --------- NOVO: TOOL fetch ---------
 # Recebe ids e devolve conteúdo textual
 @mcp.tool(name="fetch", description="Busca o conteúdo bruto de itens por id.")
-def fetch(ids: List[str]) -> List[Dict]:
-    results = []
-    for _id in ids:
+def fetch(id: _id) -> List[Dict]:
+    :
         if _id == "echo://static":
-            results.append({"id": _id, "mime_type": "text/plain", "content": "Echo!"})
-        elif _id.startswith("echo://"):
-            text = _id.replace("echo://", "", 1)
-            results.append({"id": _id, "mime_type": "text/plain", "content": f"Echo: {text}"})
-        else:
-            results.append({"id": _id, "error": "not_found"})
-    return results
+            return({"id": _id, "mime_type": "text/plain", "content": "Echo!"})
+        
